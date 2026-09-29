@@ -353,3 +353,125 @@
     box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.15);
   }
 }
+
+/* ================= LIGHT MODE THEME OVERRIDES ================= */
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Background surfaces */
+html.light .bg-dark-950,
+html.light .bg-dark-900,
+html.light .bg-\[\#07080c\],
+html.light .bg-\[\#0c0e14\],
+html.light .bg-\[\#050609\],
+html.light .bg-surface-container-lowest\/80,
+html.light .bg-surface-container-low,
+html.light .bg-obsidian-950 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-obsidian-900,
+html.light .bg-obsidian-850,
+html.light .bg-dark-850,
+html.light .bg-surface-container-high {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Text colors */
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-200,
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .text-on-surface {
+  color: #0f172a !important;
+}
+
+html.light .text-on-surface-variant {
+  color: #475569 !important;
+}
+
+/* Borders */
+html.light .border-white\/10,
+html.light .border-white\/5,
+html.light .border-white\/20,
+html.light .border-white\/30 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Gradient text adjustments */
+html.light .title-gradient {
+  background: linear-gradient(120deg, #0f172a 0%, #1e293b 22%, #7c3aed 48%, #0284c7 72%, #6d28d9 90%, #0f172a 100%);
+  background-size: 260% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards & containers in light mode */
+html.light .glass-card,
+html.light .glass-card-frosted {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.06), 0 4px 10px -2px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light header.fixed {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light footer {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Light mode cards */
+html.light .from-\[\#1f0b0b\]\/90,
+html.light .from-\[\#120724\]\/90,
+html.light .from-\[\#062419\]\/90,
+html.light .from-\[\#071f2c\]\/90,
+html.light .from-\[\#1b0d2a\]\/80,
+html.light .from-\[\#0e1628\]\/80,
+html.light .from-\[\#102220\]\/80 {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Ambient glow opacity in light mode */
+html.light .ambient-glow-purple,
+html.light .ambient-glow-cyan,
+html.light .ambient-glow-bottom {
+  opacity: 0.35 !important;
+  filter: blur(140px);
+}

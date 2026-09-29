@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { siteConfig } from '../data/content';
 
-export default function Navbar() {
+export default function Navbar({ theme = 'dark', toggleTheme }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('work');
 
@@ -74,8 +74,31 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right: Quick Action Button & Direct Contact */}
-        <div className="flex items-center gap-3">
+        {/* Right: Quick Action Button, Theme Switcher & Direct Contact */}
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          {/* Theme Toggle Button */}
+          {toggleTheme && (
+            <button
+              onClick={toggleTheme}
+              type="button"
+              aria-label="Toggle theme"
+              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high border border-white/10 hover:border-cyan-400/40 text-on-surface transition-all duration-300 shadow-sm cursor-pointer"
+            >
+              {theme === 'dark' ? (
+                <>
+                  <span className="material-symbols-outlined text-[17px] text-amber-300">light_mode</span>
+                  <span className="font-space text-[11px] font-bold text-slate-200 hidden sm:inline">Light</span>
+                </>
+              ) : (
+                <>
+                  <span className="material-symbols-outlined text-[17px] text-indigo-500">dark_mode</span>
+                  <span className="font-space text-[11px] font-bold text-slate-800 hidden sm:inline">Dark</span>
+                </>
+              )}
+            </button>
+          )}
+
           <a
             href="#contact"
             className="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-full bg-surface-container-high font-space text-xs tracking-wider text-primary hover:bg-primary-container hover:text-on-primary-container shadow-[0_0_20px_-3px_rgba(0,240,255,0.3)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] transition-all duration-300 font-bold border border-white/5"
