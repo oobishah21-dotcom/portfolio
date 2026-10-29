@@ -23,7 +23,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#040810] text-[#E2E8F0] font-sans antialiased selection:bg-brandBlue selection:text-white flex flex-col relative">
+    <div className="min-h-screen bg-[#060B16] text-[#F2F5FA] font-sans antialiased selection:bg-brandBlue selection:text-white flex flex-col relative">
       {/* 1. Main Header */}
       <Navbar />
 

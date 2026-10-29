@@ -7,37 +7,49 @@ export default function Footer() {
   const whatsappUrl = `https://wa.me/923039199321?text=${encodeURIComponent('Hi Obaid! I saw your portfolio and would like to discuss a video project.')}`;
 
   return (
-    <footer className="bg-[#02050B] relative pt-12 pb-6 text-gray-400" id="contact">
-      <div className="max-w-[1400px] mx-auto px-6">
+    <footer className="bg-[#040812] relative pt-14 pb-8 text-[#8B95A9] border-t border-brandBorder/50 overflow-hidden" id="contact">
+      {/* Panoramic Mountain Landscape Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img
+          src="/mountain-night-panorama.jpg"
+          alt="Night Mountain Panorama"
+          className="w-full h-full object-cover object-center opacity-35 contrast-125"
+        />
+        {/* Soft atmospheric gradient overlays to ensure text & buttons stay prominent */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#040812] via-[#040812]/85 to-[#040812]/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#040812]/90 via-[#040812]/70 to-[#040812]/90"></div>
+      </div>
+
+      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
         {/* Upper Footer Row */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-12 border-b border-brandBorder/40">
           {/* Brand Info */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2.5 mb-2">
               <svg className="w-7 h-7 text-brandBlue" fill="none" viewBox="0 0 32 32">
-                <path d="M7 6L25 16L7 26V6Z" fill="#0075FF"></path>
-                <path d="M12 9.5L23.5 16L12 22.5V9.5Z" fill="#00D8F6" fillOpacity="0.4"></path>
+                <path d="M7 6L25 16L7 26V6Z" fill="#2F80FF"></path>
+                <path d="M12 9.5L23.5 16L12 22.5V9.5Z" fill="#00D4FF" fillOpacity="0.45"></path>
               </svg>
-              <span className="text-xl font-bold tracking-tight text-white">
+              <span className="text-xl font-bold tracking-tight text-[#F2F5FA]">
                 Obaid <span className="text-brandBlue font-extrabold">Shah</span>
               </span>
             </div>
-            <p className="text-xs text-gray-400">AI Video Creator &amp; Storyteller</p>
+            <p className="text-xs text-[#8B95A9]">AI Video Creator &amp; Storyteller</p>
           </div>
 
           {/* Center CTA: Get in Touch */}
           <div className="md:col-span-4 text-center flex flex-col items-center">
-            <h3 className="text-sm font-semibold text-white mb-1">Get In Touch</h3>
-            <p className="text-xs text-gray-400 mb-4 max-w-xs">Have a project in mind? Let's create something amazing together.</p>
+            <h3 className="text-sm font-semibold text-[#F2F5FA] mb-1">Get In Touch</h3>
+            <p className="text-xs text-[#8B95A9] mb-4 max-w-xs">Have a project in mind? Let's create something amazing together.</p>
             <div className="flex items-center gap-3">
               <a
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brandBlue hover:bg-brandBlueHover text-white text-xs font-medium shadow-[0_0_15px_rgba(0,117,255,0.4)] transition-all"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brandBlue hover:bg-brandBlueHover text-white text-xs font-medium shadow-[0_0_15px_rgba(47,128,255,0.4)] transition-all"
                 href={`mailto:${email}`}
               >
                 Contact Me <span>&gt;</span>
               </a>
               <a
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#081220] border border-brandBorder hover:border-emerald-500 text-emerald-400 text-xs font-medium transition-all"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-brandDarkCard border border-brandBorder hover:border-emerald-500 text-emerald-400 text-xs font-medium transition-all"
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,10 +61,10 @@ export default function Footer() {
 
           {/* Social Icons & Tagline */}
           <div className="md:col-span-4 flex flex-col items-start md:items-end">
-            <div className="flex items-center space-x-3 mb-3 text-gray-300">
+            <div className="flex items-center space-x-3 mb-3 text-[#8B95A9]">
               {/* YouTube */}
               <a
-                className="w-8 h-8 rounded-full bg-[#081220] border border-brandBorder flex items-center justify-center hover:text-white hover:border-brandBlue transition-colors"
+                className="w-8 h-8 rounded-full bg-brandDarkCard border border-brandBorder flex items-center justify-center hover:text-[#F2F5FA] hover:border-brandBlue transition-colors"
                 href={youtubeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +77,7 @@ export default function Footer() {
 
               {/* LinkedIn */}
               <a
-                className="w-8 h-8 rounded-full bg-[#081220] border border-brandBorder flex items-center justify-center hover:text-white hover:border-brandBlue transition-colors"
+                className="w-8 h-8 rounded-full bg-brandDarkCard border border-brandBorder flex items-center justify-center hover:text-[#F2F5FA] hover:border-brandBlue transition-colors"
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -78,7 +90,7 @@ export default function Footer() {
 
               {/* X (Twitter) */}
               <a
-                className="w-8 h-8 rounded-full bg-[#081220] border border-brandBorder flex items-center justify-center hover:text-white hover:border-brandBlue transition-colors"
+                className="w-8 h-8 rounded-full bg-brandDarkCard border border-brandBorder flex items-center justify-center hover:text-[#F2F5FA] hover:border-brandBlue transition-colors"
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -91,7 +103,7 @@ export default function Footer() {
 
               {/* Mail */}
               <a
-                className="w-8 h-8 rounded-full bg-[#081220] border border-brandBorder flex items-center justify-center hover:text-white hover:border-brandBlue transition-colors"
+                className="w-8 h-8 rounded-full bg-brandDarkCard border border-brandBorder flex items-center justify-center hover:text-[#F2F5FA] hover:border-brandBlue transition-colors"
                 href={`mailto:${email}`}
                 aria-label="Email"
               >
@@ -102,16 +114,16 @@ export default function Footer() {
             </div>
 
             {/* Handwritten Motto */}
-            <div className="font-handwritten text-lg text-cyan-300 select-none">
+            <div className="font-handwritten text-lg text-brandOrange select-none">
               Create ★ Edit ★ Inspire
             </div>
           </div>
         </div>
 
         {/* Bottom Sub-Footer Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#8B95A9]">
           <div>© {new Date().getFullYear()} Obaid Shah. All rights reserved.</div>
-          <div className="mt-2 sm:mt-0 font-medium text-gray-400">AI | Video | Storytelling</div>
+          <div className="mt-2 sm:mt-0 font-medium text-[#8B95A9]">AI | Video | Storytelling</div>
         </div>
       </div>
     </footer>

@@ -104,7 +104,7 @@ export const projects = [
     title: "Claim Your $46 Freeplay + Referral Bonus NOW! | Vegas Vixen",
     category: "ads",
     aspectRatio: "9:16",
-    thumbnail: null,
+    thumbnail: "/game-referral-ad-thumb.jpg",
     previewClip: null,
     fullVideoUrl: "https://youtube.com/shorts/HqJj0Tovdu0",
     videoType: "youtube",

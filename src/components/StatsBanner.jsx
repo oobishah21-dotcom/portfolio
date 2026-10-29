@@ -2,21 +2,23 @@ import React from 'react';
 
 export default function StatsBanner() {
   return (
-    <section className="relative py-12 bg-gradient-to-r from-[#030914] via-[#081224] to-[#040A16] border-b border-brandBorder/50 overflow-hidden">
-      {/* Mountain ridge silhouette background */}
-      <div className="absolute inset-0 opacity-15 pointer-events-none">
-        <svg className="w-full h-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1200 120">
-          <path
-            d="M0 120 L80 80 L180 110 L280 50 L420 100 L560 40 L700 85 L840 30 L980 95 L1120 45 L1200 70 L1200 120 Z"
-            fill="#3B82F6"
-          ></path>
-        </svg>
+    <section className="relative py-14 sm:py-16 bg-[#060B16] border-b border-brandBorder/50 overflow-hidden">
+      {/* Panoramic Mountain Landscape Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img
+          src="/mountain-night-panorama.jpg"
+          alt="Night Mountain Panorama"
+          className="w-full h-full object-cover object-left opacity-40 contrast-125"
+        />
+        {/* Gradients to blend smoothly with dark background and maintain high text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#060B16]/85 via-[#060B16]/60 to-[#060B16]/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#060B16] via-transparent to-[#060B16]/70"></div>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Handwritten callout */}
         <div className="lg:col-span-3">
-          <div className="font-handwritten text-2xl sm:text-3xl text-cyan-200 leading-snug -rotate-6 select-none">
+          <div className="font-handwritten text-2xl sm:text-3xl text-brandOrange leading-snug -rotate-6 select-none">
             Let's Create<br />
             Something<br />
             <span className="text-brandOrange">Amazing</span>
@@ -36,8 +38,8 @@ export default function StatsBanner() {
               </svg>
             </div>
             <div>
-              <div className="text-xl font-bold text-white leading-tight">20+</div>
-              <div className="text-[11px] text-gray-400">Videos Created</div>
+              <div className="text-xl font-bold text-[#F2F5FA] leading-tight">20+</div>
+              <div className="text-[11px] text-[#8B95A9]">Videos Created</div>
             </div>
           </div>
 
@@ -54,8 +56,8 @@ export default function StatsBanner() {
               </svg>
             </div>
             <div>
-              <div className="text-xl font-bold text-white leading-tight">100%</div>
-              <div className="text-[11px] text-gray-400">Client Satisfaction</div>
+              <div className="text-xl font-bold text-[#F2F5FA] leading-tight">100%</div>
+              <div className="text-[11px] text-[#8B95A9]">Client Satisfaction</div>
             </div>
           </div>
 
@@ -67,18 +69,18 @@ export default function StatsBanner() {
               </svg>
             </div>
             <div>
-              <div className="text-xl font-bold text-white leading-tight">6+</div>
-              <div className="text-[11px] text-gray-400">AI Tools Mastered</div>
+              <div className="text-xl font-bold text-[#F2F5FA] leading-tight">6+</div>
+              <div className="text-[11px] text-[#8B95A9]">AI Tools Mastered</div>
             </div>
           </div>
         </div>
 
         {/* Right Quote Statement */}
         <div className="lg:col-span-3 text-left lg:text-right">
-          <blockquote className="text-sm italic text-cyan-200/90 font-medium">
+          <blockquote className="text-sm italic text-brandCyan/90 font-medium">
             "Great stories aren't just seen, they're felt."
           </blockquote>
-          <p className="text-xs text-gray-400 mt-1">— Obaid Shah</p>
+          <p className="text-xs text-[#8B95A9] mt-1">— Obaid Shah</p>
         </div>
       </div>
     </section>

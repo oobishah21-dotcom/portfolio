@@ -35,15 +35,15 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full bg-[#040810]/90 backdrop-blur-md sticky top-0 z-50 border-b border-brandBorder/40">
+    <header className="w-full bg-[#060B16]/90 backdrop-blur-md sticky top-0 z-50 border-b border-brandBorder/60">
       <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand Logo */}
         <a className="flex items-center gap-2.5 group" data-purpose="brand-logo" href="#home">
           <svg className="w-8 h-8 text-brandBlue transform transition-transform group-hover:scale-105" fill="none" viewBox="0 0 32 32">
-            <path d="M7 6L25 16L7 26V6Z" fill="#0075FF"></path>
-            <path d="M12 9.5L23.5 16L12 22.5V9.5Z" fill="#00D8F6" fillOpacity="0.4"></path>
+            <path d="M7 6L25 16L7 26V6Z" fill="#2F80FF"></path>
+            <path d="M12 9.5L23.5 16L12 22.5V9.5Z" fill="#00D4FF" fillOpacity="0.45"></path>
           </svg>
-          <span className="text-xl font-bold tracking-tight text-white">
+          <span className="text-xl font-bold tracking-tight text-[#F2F5FA]">
             Obaid <span className="text-brandBlue font-extrabold">Shah</span>
           </span>
         </a>
@@ -58,8 +58,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`transition-colors py-1 relative ${
                   isActive
-                    ? 'text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:bg-brandBlue'
-                    : 'text-gray-300 hover:text-white'
+                    ? 'text-[#F2F5FA] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:bg-brandBlue'
+                    : 'text-[#8B95A9] hover:text-[#F2F5FA]'
                 }`}
               >
                 {link.name}
@@ -71,7 +71,7 @@ export default function Navbar() {
         {/* Right Action Button & Mobile Toggle */}
         <div className="flex items-center gap-3">
           <a
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-600 hover:border-brandBlue text-sm font-medium text-gray-200 hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,117,255,0.4)]"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-brandBorder hover:border-brandBlue text-sm font-medium text-[#F2F5FA] transition-all duration-300 hover:shadow-[0_0_15px_rgba(47,128,255,0.4)]"
             href="#contact"
           >
             <span>Let's Work Together</span>
@@ -83,7 +83,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-[#091322] border border-brandBorder transition-colors"
+            className="md:hidden p-2 rounded-lg text-[#8B95A9] hover:text-[#F2F5FA] hover:bg-brandDarkCard border border-brandBorder transition-colors"
             aria-label="Toggle Navigation"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,14 +99,14 @@ export default function Navbar() {
 
       {/* Mobile Navigation Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#040810]/95 border-b border-brandBorder/60 px-6 py-4 space-y-3">
+        <div className="md:hidden bg-[#060B16]/95 border-b border-brandBorder/60 px-6 py-4 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
               className={`block py-2 text-sm font-medium transition-colors ${
-                activeSection === link.id ? 'text-brandBlue font-bold' : 'text-gray-300 hover:text-white'
+                activeSection === link.id ? 'text-brandBlue font-bold' : 'text-[#8B95A9] hover:text-[#F2F5FA]'
               }`}
             >
               {link.name}

@@ -95,15 +95,15 @@ export default function VideoModal({ project, isOpen, onClose }) {
           onClick={(e) => e.stopPropagation()}
           className={`relative w-full ${
             isVertical ? 'max-w-md' : 'max-w-4xl'
-          } rounded-2xl bg-dark-900 border border-white/10 shadow-2xl shadow-brand-violet/20 overflow-hidden flex flex-col my-auto max-h-[92vh]`}
+          } rounded-2xl bg-brandDarkCard border border-brandBorder shadow-2xl shadow-brandBlue/20 overflow-hidden flex flex-col my-auto max-h-[92vh]`}
         >
           {/* Header Bar */}
-          <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-dark-950/60 shrink-0">
+          <div className="flex items-center justify-between px-5 py-3.5 border-b border-brandBorder bg-brandDark/80 shrink-0">
             <div className="flex items-center gap-2">
-              <span className="uppercase text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-brand-violet/20 text-brand-cyan border border-brand-violet/30">
+              <span className="uppercase text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-brandBlue/15 text-brandCyan border border-brandBlue/30">
                 {project.category}
               </span>
-              <h3 id="modal-title" className="text-sm sm:text-base font-semibold text-white truncate max-w-xs sm:max-w-md">
+              <h3 id="modal-title" className="text-sm sm:text-base font-semibold text-[#F2F5FA] truncate max-w-xs sm:max-w-md">
                 {project.title}
               </h3>
             </div>
@@ -114,7 +114,7 @@ export default function VideoModal({ project, isOpen, onClose }) {
                   href={project.fullVideoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+                  className="p-1.5 rounded-lg text-[#8B95A9] hover:text-[#F2F5FA] hover:bg-white/10 transition-colors"
                   title="Open original video"
                   aria-label="Open original video in new tab"
                 >
@@ -123,7 +123,7 @@ export default function VideoModal({ project, isOpen, onClose }) {
               )}
               <button
                 onClick={onClose}
-                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+                className="p-1.5 rounded-lg text-[#8B95A9] hover:text-[#F2F5FA] hover:bg-white/10 transition-colors"
                 aria-label="Close video player"
               >
                 <X className="w-5 h-5" />
@@ -174,39 +174,39 @@ export default function VideoModal({ project, isOpen, onClose }) {
           </div>
 
           {/* Project Details Panel */}
-          <div className="p-5 sm:p-6 overflow-y-auto space-y-4 bg-dark-900/90 shrink-0">
-            <p className="text-sm text-slate-300 leading-relaxed">
+          <div className="p-5 sm:p-6 overflow-y-auto space-y-4 bg-brandDarkCard shrink-0">
+            <p className="text-sm text-[#8B95A9] leading-relaxed">
               {project.description}
             </p>
 
             {/* Campaign Metrics / Details Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-white/10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-brandBorder">
               {project.brand && (
-                <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-dark-850 border border-white/5">
-                  <Building className="w-4 h-4 text-brand-cyan shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-[#08101E] border border-brandBorder">
+                  <Building className="w-4 h-4 text-brandCyan shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-medium">Client / Brand</span>
-                    <span className="text-xs font-semibold text-white">{project.brand}</span>
+                    <span className="text-[10px] text-[#8B95A9] uppercase tracking-wider block font-medium">Client / Brand</span>
+                    <span className="text-xs font-semibold text-[#F2F5FA]">{project.brand}</span>
                   </div>
                 </div>
               )}
 
               {project.goal && (
-                <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-dark-850 border border-white/5">
-                  <Target className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-[#08101E] border border-brandBorder">
+                  <Target className="w-4 h-4 text-brandBlue shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-medium">Objective</span>
-                    <span className="text-xs font-medium text-slate-200">{project.goal}</span>
+                    <span className="text-[10px] text-[#8B95A9] uppercase tracking-wider block font-medium">Objective</span>
+                    <span className="text-xs font-medium text-[#F2F5FA]">{project.goal}</span>
                   </div>
                 </div>
               )}
 
               {project.result && (
-                <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-dark-850 border border-brand-violet/30 bg-gradient-to-br from-brand-violet/10 to-transparent">
-                  <Award className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-[#08101E] border border-brandBorder">
+                  <Award className="w-4 h-4 text-brandOrange shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-medium">Key Result</span>
-                    <span className="text-xs font-bold text-white gradient-text">{project.result}</span>
+                    <span className="text-[10px] text-[#8B95A9] uppercase tracking-wider block font-medium">Key Result</span>
+                    <span className="text-xs font-bold text-brandCyan">{project.result}</span>
                   </div>
                 </div>
               )}
@@ -218,7 +218,7 @@ export default function VideoModal({ project, isOpen, onClose }) {
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="text-[11px] px-2.5 py-0.5 rounded-md bg-white/5 border border-white/10 text-slate-300"
+                    className="text-[11px] px-2.5 py-0.5 rounded-md bg-[#142036] border border-brandBorder text-[#8B95A9]"
                   >
                     #{tag}
                   </span>
