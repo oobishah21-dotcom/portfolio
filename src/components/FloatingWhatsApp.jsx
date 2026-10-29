@@ -2,13 +2,13 @@ import React from 'react';
 import { siteConfig } from '../data/content';
 
 export default function FloatingWhatsApp() {
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(siteConfig.contact.whatsappDefaultMessage)}`;
+  const whatsappUrl = `https://wa.me/923039199321?text=${encodeURIComponent(siteConfig?.contact?.whatsappDefaultMessage || 'Hi Obaid! I saw your portfolio and would like to discuss a video project.')}`;
 
   return (
     <aside className="fixed bottom-6 right-6 z-50">
       <a
         aria-label="Direct WhatsApp Message"
-        className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-primary-container text-on-primary-container shadow-[0_0_25px_rgba(0,240,255,0.45)] hover:shadow-[0_0_40px_rgba(0,240,255,0.7)] hover:scale-110 active:scale-95 transition-all duration-300"
+        className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-brandBlue text-white shadow-[0_0_25px_rgba(0,117,255,0.45)] hover:shadow-[0_0_35px_rgba(0,117,255,0.8)] hover:scale-110 active:scale-95 transition-all duration-300"
         href={whatsappUrl}
         rel="noopener noreferrer"
         target="_blank"

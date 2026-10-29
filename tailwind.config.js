@@ -75,6 +75,13 @@ export default {
           800: '#151824',
           700: '#1f2438',
         },
+        brandDark: '#040810',
+        brandDarkCard: '#08111e',
+        brandBlue: '#0075FF',
+        brandBlueHover: '#005fe0',
+        brandCyan: '#00D8F6',
+        brandOrange: '#FF9E2C',
+        brandBorder: '#162338',
         brand: {
           violet: '#8B5CF6',
           indigo: '#6366F1',
@@ -82,9 +89,10 @@ export default {
         }
       },
       fontFamily: {
+        sans: ['Inter', 'Plus Jakarta Sans', 'sans-serif'],
+        handwritten: ['Kalam', 'cursive', 'sans-serif'],
         syne: ['Syne', 'sans-serif'],
         space: ['Space Grotesk', 'sans-serif'],
-        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
         "display-hero": ['Space Grotesk', 'sans-serif'],
         "headline-lg": ['Space Grotesk', 'sans-serif'],
         "headline-md": ['Space Grotesk', 'sans-serif'],
