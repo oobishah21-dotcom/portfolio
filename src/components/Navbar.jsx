@@ -69,13 +69,14 @@ export default function Navbar() {
         </nav>
 
         {/* Right Action Button & Mobile Toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-brandBorder hover:border-brandBlue text-sm font-medium text-[#F2F5FA] transition-all duration-300 hover:shadow-[0_0_15px_rgba(47,128,255,0.4)]"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border border-brandBorder hover:border-brandBlue text-xs sm:text-sm font-medium text-[#F2F5FA] transition-all duration-300 hover:shadow-[0_0_15px_rgba(47,128,255,0.4)]"
             href="#contact"
           >
-            <span>Let's Work Together</span>
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span className="hidden sm:inline">Let's Work Together</span>
+            <span className="sm:hidden">Work Together</span>
+            <svg className="w-3 sm:w-3.5 h-3 sm:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5"></path>
             </svg>
           </a>
